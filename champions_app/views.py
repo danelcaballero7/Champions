@@ -2,23 +2,21 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    pass
+    return render(request, 'home.html')
 
 def competitions(request):
-    pass
+    return render(request, 'competitions.html')
 
 def teams(request):
-    pass
+    return render(request, 'teams.html')
 
 def statistics(request):
-    pass
+    return render(request, 'statistics.html')
 
 def us(request):
-    pass
+    return render(request, 'us.html')
 
 
 def competition_history(request):
-    pass
+    return render(request, 'competition_history.html')
 
-def prueba(request):
-    pass
