@@ -19,3 +19,6 @@ def us(request):
 
 def competition_history(request):
     pass
+
+def prueba(request):
+    pass
