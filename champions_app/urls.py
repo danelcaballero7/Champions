@@ -3,9 +3,10 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name="home"),
-    path('competitions/', views.competitions, name="competitions"),
-    path('teams/', views.teams, name='teams'),
-    path('statistics/', views.statistics, name="statistics"),
-    path('us/', views.us, name="us"),
-    path('competition_history/', views.competition_history, name="competition_history")
+    path('Competiciones/', views.Competiciones, name="Competiciones"),
+    path('Equipos/', views.Equipos, name='Equipos'),
+    path('Estadísticas/', views.Estadísticas, name="Estadísticas"),
+    path('Nosotros/', views.Nosotros, name="Nosotros"),
+    path('Jugadores/',views.Jugadores, name="Jugadores"),
+    path('Historial_de_competición/', views.Historial_de_competición, name="Historial_de_competición")
     ]

@@ -18,7 +18,6 @@ class player(models.Model):
     name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
     second_last_name = models.CharField(max_length=20)
-    age = models.PositiveIntegerField(default=0)
     date_of_birth = models.DateTimeField(default=datetime.now, blank=True),
     height = models.PositiveIntegerField(default=0)
     weight = models.PositiveIntegerField(default=0)
@@ -45,13 +44,13 @@ class player(models.Model):
     )
 
 class competition(models.Model):
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=20, verbose_name="competiciones")
     data = models.DateTimeField(default=datetime.now, blank=True)
     value_rank = models.PositiveIntegerField(default=0)
     teams = models.ManyToManyField(team)
-
     def __str__(self):
         return self.name
+
 
 
 

@@ -7,59 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <script type="text/javascript" src="funciones_navbar"></script>
+    <link rel="stylesheet" href="{% static 'css/Champion.css' %}">
+
 </head>
 <body>
 
-<!--NAV-BAR -->
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">icono</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link {% if request.path == '/' %} activo {% endif %}" aria-current="page"
-   href="{% url 'home' %}">Inicio</a>
-        </li>
-        <li class="nav-item">
-
-        </li>
-        <li class="nav-item dropdown">
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {% if request.path == '/' %} activo {% endif %}" aria-current="page"
-   href="{% url 'teams' %}">Equipos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {% if request.path == '/' %} activo {% endif %}" aria-current="page"
-   href="{% url 'competitions' %}">Competiciones</a>
-        </li>
-          <li class="nav-item">
-          <a class="nav-link {% if request.path == '/' %} activo {% endif %}" aria-current="page"
-   href="{% url 'statistics' %}">Estadisticas</a>
-        </li>
-          <li class="nav-item">
-          <a class="nav-link {% if request.path == '/' %} activo {% endif %}" aria-current="page"
-   href="{% url 'competition_history' %}">Historia</a>
-        </li>
-      </ul>
-
-    </div>
-  </div>
-</nav>
-
-<!--NAV-BAR-FIN -->
 
 {% block content %}
 
@@ -68,7 +20,7 @@
 
 <!--FOOTER -->
 
-<footer class="text-center text-white" style="background-color: #f1f1f1;">
+<footer class="text-center text-dark" style="background-color: dimgrey;">
   <!-- Grid container -->
   <div class="container pt-4">
     <!-- Section: Social media -->

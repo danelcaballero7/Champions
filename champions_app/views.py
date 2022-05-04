@@ -1,22 +1,34 @@
 from django.shortcuts import render
 
 # Create your views here.
+from champions_app.models import team,competition,player
+
+
 def home(request):
     return render(request, 'home.html')
 
-def competitions(request):
-    return render(request, 'competitions.html')
+def Competiciones(request):
+    competitionsViews= competition.objects.all()
+    return render(request, 'Competiciones.html',{"competitionsViews":competitionsViews})
 
-def teams(request):
-    return render(request, 'teams.html')
+def Equipos(request):
+    teamViews= team.objects.all()
+    return render(request, 'Equipos.html', {"teamViews": teamViews})
 
-def statistics(request):
-    return render(request, 'statistics.html')
+def Jugadores(request):
+    jugadoresViews= player.objects.all()
+    teamPlayerViews = team.objects.all()
+    return render(request,'Jugadores.html',{"jugadoresViews":jugadoresViews, "teamViews": teamPlayerViews})
 
-def us(request):
-    return render(request, 'us.html')
+def Estadísticas(request):
+    return render(request, 'Estadísticas.html')
+
+def Nosotros(request):
+    return render(request, 'Nosotros.html')
 
 
-def competition_history(request):
-    return render(request, 'competition_history.html')
+def Historial_de_competición(request):
+    return render(request, 'Historial_de_competición.html', {'nbar': 'Equipos'})
+
+
 
